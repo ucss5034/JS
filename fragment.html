@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragment</title>
+</head>
+
+<body>
+    <input type="button" value="Add Item" onclick="addItem();">
+    <ul id="ulList">
+
+    </ul>
+    <script type="text/javascript">
+        var ulList = document.getElementById("ulList");
+        function addItem() {
+            var frag = document.createDocumentFragment();
+            var li = null;
+            for (var i = 1; i <= 3; i++) {
+                li = document.createElement("li");
+                // li.innerHTML = ("Item " + i);
+                li.appendChild(document.createTextNode("Item " + i));
+                frag.appendChild(li);
+            }
+            ulList.appendChild(frag);
+        }
+    </script>
+</body>
+
+</html>

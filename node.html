@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+</head>
+
+<body>
+    <input type="text" id="text">
+    <button onclick="createP()">Create P</button>
+    <script type="text/javascript">
+        function createP() {
+            var text = document.getElementById("text");
+            var p = document.createElement("p");
+            var text = document.createTextNode(text.value);
+            p.appendChild(text);
+            document.body.appendChild(p);
+            text.value = "";
+        }
+    </script>
+</body>
+
+</html>

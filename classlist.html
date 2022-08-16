@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List</title>
+    <style>
+        .stylish-text{
+            color: white;
+            background-color: #00fefe;
+        }
+    </style>
+</head>
+<body>
+    <div id="intro-text">မင်္ဂလာပါခင်ဗျ။  ကျွန်တော် နာမည်ကတော့ ဒီးဒီးပါ။</div>
+    <button onclick="stylishText()">Stylish Text</button>
+    <script type="text/javascript">
+        //document.getElementById("intro-text").classList.toggle("stylish-text");
+        function stylishText(){
+            if(document.getElementById("intro-text").classList.contains("stylish-text")){
+                document.getElementById("intro-text").classList.remove("stylish-text");
+            } else {
+                document.getElementById("intro-text").classList.add("stylish-text");
+            }
+        }
+    </script>
+</body>
+</html>
